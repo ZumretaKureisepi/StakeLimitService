@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "c7dc977a-b34c-4823-b348-4916fb44edc7",
+		"name": "StakeLimitService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Ticket Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"7d570ef2-0bef-41e9-baea-2535bd08b069\",\r\n    \"deviceId\": \"833250e4-c8a5-43c2-bf98-e7afc5f018bd\",\r\n    \"stake\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/ticketmessage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"ticketmessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set device parameters",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeDuration\": 300,\r\n    \"stakeLimit\": 1000,\r\n    \"hotAmountPctg\": 70,\r\n    \"restrExpiry\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/device/833250e4-c8a5-43c2-bf98-e7afc5f018bd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"device",
+						"833250e4-c8a5-43c2-bf98-e7afc5f018bd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"timeDuration\": 300,\r\n    \"stakeLimit\": 1000,\r\n    \"hotAmountPctg\": 70,\r\n    \"restrExpiry\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/device",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"device"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,13 @@
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://postgresqldb:5432/slsdb
+    username: postgres
+    password: postgres
+    maximum-pool-size: 30
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+spring:
+  datasource:
+    url: jdbc:postgresql://postgresqldb:5432/slsdb
